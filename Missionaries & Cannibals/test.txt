@@ -1,0 +1,373 @@
+Script started on Wed Dec 10 08:31:30 2014
+[?1034hbash-3.2$ exit./final
+
+=======================================================
+|  |\  /|               |----                         |
+|  | \/ |               |                             |
+|  |    |issionaries &  |____ annibals                |
+=======================================================
+| By: Maxwell Partington                              |
+=======================================================
+|The goal of this program is to compute the best      |
+|path to move all of the cannibals and the            |
+|missionaries from one side of the river to           |
+|the other. Our start and goal states are as follows: |
+|Start State: [             |   : B|   M M M C C C ]] |
+|Goal State:  [ M M M C C C |B  :  |               ]] |
+|                                                     |
+|To save space, we will represent the missionaries and|
+|cannibals with numbers. Example: [ 3 3 -1- | 0 0 ]   |
+|represents the goal state. The '-1-' represents the  |
+|boats position. It is on the left shore when it is to|
+|the left of the '|', and it is on the right shore    |
+|when it is to the right of the '|'. Enjoy!           |
+=======================================================
+
+Hello! Are you ready to begin? (y/n): y
+
+=======================================================
+
+Current State:  [ 0 0 | -1- 3 3 ]
+
+Gathering valid states...
+
+All valid states in the frontier:
+		[ 0 1 -1- | 3 2 ]   Values g: '0' h: '6' f: '6'
+		[ 0 2 -1- | 3 1 ]   Values g: '0' h: '5' f: '5'
+		[ 1 1 -1- | 2 2 ]   Values g: '0' h: '5' f: '5'
+
+Moving 1 missionary(ies) and 1 cannibal(s) to the left shore.
+
+Expanding: State:[ 1 1 -1- | 2 2 ]
+
+=======================================================
+
+Would you like to continue? (y/n): y
+
+=======================================================
+
+Current State:  [ 1 1 -1- | 2 2 ]
+
+Gathering valid states...
+
+All valid states in the frontier:
+		[ 0 1 | -1- 3 2 ]   Values g: '1' h: '6' f: '7'
+		[ 0 0 | -1- 3 3 ]   Values g: '1' h: '8' f: '9'
+
+Moving 1 missionary(ies) and 0 cannibal(s) to the right shore.
+
+Expanding: State:[ 0 1 | -1- 3 2 ]
+
+=======================================================
+
+Would you like to continue? (y/n): y
+
+=======================================================
+
+Current State:  [ 0 1 | -1- 3 2 ]
+
+Gathering valid states...
+
+All valid states in the frontier:
+		[ 1 1 -1- | 2 2 ]   Values g: '2' h: '6' f: '8'
+		[ 0 2 -1- | 3 1 ]   Values g: '2' h: '5' f: '7'
+		[ 0 3 -1- | 3 0 ]   Values g: '2' h: '4' f: '6'
+
+Moving 0 missionary(ies) and 2 cannibal(s) to the left shore.
+
+Expanding: State:[ 0 3 -1- | 3 0 ]
+
+=======================================================
+
+Would you like to continue? (y/n): y
+
+=======================================================
+
+Current State:  [ 0 3 -1- | 3 0 ]
+
+Gathering valid states...
+
+All valid states in the frontier:
+		[ 0 2 | -1- 3 1 ]   Values g: '3' h: '5' f: '8'
+		[ 0 1 | -1- 3 2 ]   Values g: '3' h: '7' f: '10'
+
+Moving 0 missionary(ies) and 1 cannibal(s) to the right shore.
+
+Expanding: State:[ 0 2 | -1- 3 1 ]
+
+=======================================================
+
+Would you like to continue? (y/n): y
+
+=======================================================
+
+Current State:  [ 0 2 | -1- 3 1 ]
+
+Gathering valid states...
+
+All valid states in the frontier:
+		[ 2 2 -1- | 1 1 ]   Values g: '4' h: '3' f: '7'
+		[ 0 3 -1- | 3 0 ]   Values g: '4' h: '5' f: '9'
+
+Moving 2 missionary(ies) and 0 cannibal(s) to the left shore.
+
+Expanding: State:[ 2 2 -1- | 1 1 ]
+
+=======================================================
+
+Would you like to continue? (y/n): y
+
+=======================================================
+
+Current State:  [ 2 2 -1- | 1 1 ]
+
+Gathering valid states...
+
+All valid states in the frontier:
+		[ 0 2 | -1- 3 1 ]   Values g: '5' h: '6' f: '11'
+		[ 1 1 | -1- 2 2 ]   Values g: '5' h: '5' f: '10'
+
+Moving 1 missionary(ies) and 1 cannibal(s) to the right shore.
+
+Expanding: State:[ 1 1 | -1- 2 2 ]
+
+=======================================================
+
+Would you like to continue? (y/n): y
+
+=======================================================
+
+Current State:  [ 1 1 | -1- 2 2 ]
+
+Gathering valid states...
+
+All valid states in the frontier:
+		[ 3 1 -1- | 0 2 ]   Values g: '6' h: '3' f: '9'
+		[ 2 2 -1- | 1 1 ]   Values g: '6' h: '4' f: '10'
+
+Moving 2 missionary(ies) and 0 cannibal(s) to the left shore.
+
+Expanding: State:[ 3 1 -1- | 0 2 ]
+
+=======================================================
+
+Would you like to continue? (y/n): y
+
+=======================================================
+
+Current State:  [ 3 1 -1- | 0 2 ]
+
+Gathering valid states...
+
+All valid states in the frontier:
+		[ 1 1 | -1- 2 2 ]   Values g: '7' h: '6' f: '13'
+		[ 3 0 | -1- 0 3 ]   Values g: '7' h: '4' f: '11'
+
+Moving 0 missionary(ies) and 1 cannibal(s) to the right shore.
+
+Expanding: State:[ 3 0 | -1- 0 3 ]
+
+=======================================================
+
+Would you like to continue? (y/n): y
+
+=======================================================
+
+Current State:  [ 3 0 | -1- 0 3 ]
+
+Gathering valid states...
+
+All valid states in the frontier:
+		[ 3 1 -1- | 0 2 ]   Values g: '8' h: '4' f: '12'
+		[ 3 2 -1- | 0 1 ]   Values g: '8' h: '2' f: '10'
+
+Moving 0 missionary(ies) and 2 cannibal(s) to the left shore.
+
+Expanding: State:[ 3 2 -1- | 0 1 ]
+
+=======================================================
+
+Would you like to continue? (y/n): y
+
+=======================================================
+
+Current State:  [ 3 2 -1- | 0 1 ]
+
+Gathering valid states...
+
+All valid states in the frontier:
+		[ 2 2 | -1- 1 1 ]   Values g: '9' h: '3' f: '12'
+		[ 3 1 | -1- 0 2 ]   Values g: '9' h: '3' f: '12'
+		[ 3 0 | -1- 0 3 ]   Values g: '9' h: '5' f: '14'
+
+Moving 0 missionary(ies) and 1 cannibal(s) to the right shore.
+
+Expanding: State:[ 3 1 | -1- 0 2 ]
+
+=======================================================
+
+Would you like to continue? (y/n): y
+
+=======================================================
+
+Current State:  [ 3 1 | -1- 0 2 ]
+
+Gathering valid states...
+
+All valid states in the frontier:
+		[ 3 2 -1- | 0 1 ]   Values g: '10' h: '3' f: '13'
+		[ 3 3 -1- | 0 0 ]   Values g: '10' h: '1' f: '11'
+
+Moving 0 missionary(ies) and 2 cannibal(s) to the left shore.
+
+Expanding: State:[ 3 3 -1- | 0 0 ]
+
+=======================================================
+
+Would you like to continue? (y/n): y
+
+*We have found our goal!* Here is our path:
+
+=======================================================
+The following are the states taken to get to the goal state:
+1  State:[ 0 0 | -1- 3 3 ]
+2  State:[ 1 1 -1- | 2 2 ]
+3  State:[ 0 1 | -1- 3 2 ]
+4  State:[ 0 3 -1- | 3 0 ]
+5  State:[ 0 2 | -1- 3 1 ]
+6  State:[ 2 2 -1- | 1 1 ]
+7  State:[ 1 1 | -1- 2 2 ]
+8  State:[ 3 1 -1- | 0 2 ]
+9  State:[ 3 0 | -1- 0 3 ]
+10 State:[ 3 2 -1- | 0 1 ]
+11 State:[ 3 1 | -1- 0 2 ]
+12 State:[ 3 3 -1- | 0 0 ]
+--------------------------------------------------------
+Total cost of moves from start to finish: 85
+Total number of moves: 12
+=======================================================
+
+
+=======================================================
+I hope you've enjoyed watching this program find the
+best way to move the missionaries and cannibals safely 
+from one side of the river to the other. Take care!
+
+
+ P.S. If you've skipped and exited early, please run the
+ program again to see the full solution. Bye! :)
+=======================================================
+
+bash-3.2$ ./final
+
+=======================================================
+|  |\  /|               |----                         |
+|  | \/ |               |                             |
+|  |    |issionaries &  |____ annibals                |
+=======================================================
+| By: Maxwell Partington                              |
+=======================================================
+|The goal of this program is to compute the best      |
+|path to move all of the cannibals and the            |
+|missionaries from one side of the river to           |
+|the other. Our start and goal states are as follows: |
+|Start State: [             |   : B|   M M M C C C ]] |
+|Goal State:  [ M M M C C C |B  :  |               ]] |
+|                                                     |
+|To save space, we will represent the missionaries and|
+|cannibals with numbers. Example: [ 3 3 -1- | 0 0 ]   |
+|represents the goal state. The '-1-' represents the  |
+|boats position. It is on the left shore when it is to|
+|the left of the '|', and it is on the right shore    |
+|when it is to the right of the '|'. Enjoy!           |
+=======================================================
+
+Hello! Are you ready to begin? (y/n): n
+
+=======================================================
+I hope you've enjoyed watching this program find the
+best way to move the missionaries and cannibals safely 
+from one side of the river to the other. Take care!
+
+
+ P.S. If you've skipped and exited early, please run the
+ program again to see the full solution. Bye! :)
+=======================================================
+
+bash-3.2$ ./final
+
+=======================================================
+|  |\  /|               |----                         |
+|  | \/ |               |                             |
+|  |    |issionaries &  |____ annibals                |
+=======================================================
+| By: Maxwell Partington                              |
+=======================================================
+|The goal of this program is to compute the best      |
+|path to move all of the cannibals and the            |
+|missionaries from one side of the river to           |
+|the other. Our start and goal states are as follows: |
+|Start State: [             |   : B|   M M M C C C ]] |
+|Goal State:  [ M M M C C C |B  :  |               ]] |
+|                                                     |
+|To save space, we will represent the missionaries and|
+|cannibals with numbers. Example: [ 3 3 -1- | 0 0 ]   |
+|represents the goal state. The '-1-' represents the  |
+|boats position. It is on the left shore when it is to|
+|the left of the '|', and it is on the right shore    |
+|when it is to the right of the '|'. Enjoy!           |
+=======================================================
+
+Hello! Are you ready to begin? (y/n): y
+
+=======================================================
+
+Current State:  [ 0 0 | -1- 3 3 ]
+
+Gathering valid states...
+
+All valid states in the frontier:
+		[ 0 1 -1- | 3 2 ]   Values g: '0' h: '6' f: '6'
+		[ 0 2 -1- | 3 1 ]   Values g: '0' h: '5' f: '5'
+		[ 1 1 -1- | 2 2 ]   Values g: '0' h: '5' f: '5'
+
+Moving 1 missionary(ies) and 1 cannibal(s) to the left shore.
+
+Expanding: State:[ 1 1 -1- | 2 2 ]
+
+=======================================================
+
+Would you like to continue? (y/n): y
+
+=======================================================
+
+Current State:  [ 1 1 -1- | 2 2 ]
+
+Gathering valid states...
+
+All valid states in the frontier:
+		[ 0 1 | -1- 3 2 ]   Values g: '1' h: '6' f: '7'
+		[ 0 0 | -1- 3 3 ]   Values g: '1' h: '8' f: '9'
+
+Moving 1 missionary(ies) and 0 cannibal(s) to the right shore.
+
+Expanding: State:[ 0 1 | -1- 3 2 ]
+
+=======================================================
+
+Would you like to continue? (y/n): n
+
+=======================================================
+I hope you've enjoyed watching this program find the
+best way to move the missionaries and cannibals safely 
+from one side of the river to the other. Take care!
+
+
+ P.S. If you've skipped and exited early, please run the
+ program again to see the full solution. Bye! :)
+=======================================================
+
+bash-3.2$ exit
+exit
+
+Script done on Wed Dec 10 08:34:17 2014
